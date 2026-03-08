@@ -1,4 +1,4 @@
-# Transformers-Style Third-Person Shooter
+# Project CyberBots: Battle for New York
 
 A low-poly third-person shooter where players control giant robots (Vanguard) defending Earth from the Ravagers invasion force.
 
