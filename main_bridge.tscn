@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dscbfmywj0v55"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_qjeek"]
+size = Vector3(60, 4, 80)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_auao0"]
+size = Vector3(50, 4, 80)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lbr1m"]
+size = Vector3(60, 3, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c8gq7"]
+size = Vector3(35, 3, 20)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fdkui"]
+top_radius = 2.0
+bottom_radius = 2.0
+height = 11.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0qou8"]
+height = 11.0
+radius = 2.0
+
+[node name="Main_bridge" type="Node3D" unique_id=1239522996]
+
+[node name="bridgeDeck" type="StaticBody3D" parent="." unique_id=898519302]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bridgeDeck" unique_id=133026583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.617922, 0.46795845)
+mesh = SubResource("BoxMesh_qjeek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bridgeDeck" unique_id=1521730635]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.61, 0.468)
+shape = SubResource("BoxShape3D_auao0")
+
+[node name="bridgeRampL" type="StaticBody3D" parent="." unique_id=292613303]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bridgeRampL" unique_id=498913087]
+transform = Transform3D(1, 0, 0, 0, 0.9891316, -0.14703259, 0, 0.14703259, 0.9891316, 0, 11.797293, 50.12382)
+mesh = SubResource("BoxMesh_lbr1m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bridgeRampL" unique_id=1958116920]
+transform = Transform3D(1, 0, 0, 0, 0.9890159, -0.1478094, 0, 0.1478094, 0.9890159, 0, 11.79, 50.12)
+shape = SubResource("BoxShape3D_c8gq7")
+
+[node name="bridgeRampR" type="StaticBody3D" parent="." unique_id=202024490]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -0.1338005, 1.1326904)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bridgeRampR" unique_id=1465505520]
+transform = Transform3D(1, 0, 0, 0, 0.9891316, -0.14703259, 0, 0.14703259, 0.9891316, 0, 11.797293, 50.12382)
+mesh = SubResource("BoxMesh_lbr1m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bridgeRampR" unique_id=682987658]
+transform = Transform3D(1, 0, 0, 0, 0.9890159, -0.1478094, 0, 0.1478094, 0.9890159, 0, 11.79, 50.12)
+shape = SubResource("BoxShape3D_c8gq7")
+
+[node name="Pillar1L" type="StaticBody3D" parent="." unique_id=777056262]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar1L" unique_id=1538614987]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059445, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar1L" unique_id=2110186876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar1R" type="StaticBody3D" parent="." unique_id=1016391789]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar1R" unique_id=1593697906]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar1R" unique_id=324973598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar2R" type="StaticBody3D" parent="." unique_id=629165322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar2R" unique_id=1846000136]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar2R" unique_id=1640366243]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar2L" type="StaticBody3D" parent="." unique_id=1570854425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -21)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar2L" unique_id=530220831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar2L" unique_id=1155922681]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar3R" type="StaticBody3D" parent="." unique_id=84643748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar3R" unique_id=1718241026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar3R" unique_id=457340506]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar3L" type="StaticBody3D" parent="." unique_id=1835234720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -45)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar3L" unique_id=1574265923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar3L" unique_id=232310612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar4R" type="StaticBody3D" parent="." unique_id=1143993726]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -68)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar4R" unique_id=1968809078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar4R" unique_id=1520156519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")
+
+[node name="Pillar4L" type="StaticBody3D" parent="." unique_id=430786372]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -68)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pillar4L" unique_id=339255922]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+mesh = SubResource("CylinderMesh_fdkui")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pillar4L" unique_id=241165992]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22, 5.059, 35)
+shape = SubResource("CylinderShape3D_0qou8")

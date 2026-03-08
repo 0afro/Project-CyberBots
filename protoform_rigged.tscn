@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bjlg2mj7umffc"]
+
+[ext_resource type="PackedScene" uid="uid://clivmlkcaancy" path="res://models/protoform.glb" id="1_b33qm"]
+
+[node name="protoform_rigged" unique_id=144013208 instance=ExtResource("1_b33qm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.07502, 0)

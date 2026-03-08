@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://citn0tvpm5cul"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m0dsu"]
+transparency = 1
+albedo_color = Color(0.14901961, 0.50980395, 0.6, 1)
+roughness = 0.51
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gqjxk"]
+material = SubResource("StandardMaterial3D_m0dsu")
+size = Vector2(600, 80)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iiml5"]
+size = Vector3(600, 12, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5iwgs"]
+size = Vector3(600, 12, 5)
+
+[node name="River" type="Node3D" unique_id=405506110]
+
+[node name="Water" type="MeshInstance3D" parent="." unique_id=48272757]
+mesh = SubResource("PlaneMesh_gqjxk")
+
+[node name="bank_left" type="MeshInstance3D" parent="." unique_id=947923772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.6699715, 42.46514)
+mesh = SubResource("BoxMesh_iiml5")
+
+[node name="bank_right" type="MeshInstance3D" parent="." unique_id=768662688]
+transform = Transform3D(1, 0, 0, 0, 0.9999991, -0.0013264492, 0, 0.0013264492, 0.9999991, 0, 5.6699715, -40.825344)
+mesh = SubResource("BoxMesh_iiml5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1015237264]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1921229096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.8218765, 42.447655)
+shape = SubResource("BoxShape3D_5iwgs")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=658371626]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.8218765, -41.052345)
+shape = SubResource("BoxShape3D_5iwgs")

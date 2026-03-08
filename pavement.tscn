@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://mdbqyfnsxq3j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_igvmb"]
+albedo_color = Color(0.49354547, 0.49354553, 0.49354553, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jyd0j"]
+material = SubResource("StandardMaterial3D_igvmb")
+size = Vector3(16, 0.3, 80)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4u75a"]
+size = Vector3(16, 0.3, 80)
+
+[node name="Pavement" type="Node3D" unique_id=944126542]
+
+[node name="Pavement" type="StaticBody3D" parent="." unique_id=1069472912]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pavement" unique_id=2038153457]
+mesh = SubResource("BoxMesh_jyd0j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pavement" unique_id=721988653]
+shape = SubResource("BoxShape3D_4u75a")

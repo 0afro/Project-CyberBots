@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://bst7djmnnxwwn"]
+
+[ext_resource type="PackedScene" uid="uid://dbd71yfyxgpq6" path="res://medium_building.tscn" id="5_xru84"]
+[ext_resource type="PackedScene" uid="uid://54wngx261kqh" path="res://filler_build.tscn" id="6_7felo"]
+[ext_resource type="PackedScene" uid="uid://ckgrstb5id4me" path="res://skyscrapers.tscn" id="7_2s6ge"]
+
+[node name="buildings_layout" type="Node3D" unique_id=140307090]
+
+[node name="medium_building" parent="." unique_id=1815750143 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -233.8193, 42.661377, 255.00824)
+
+[node name="medium_building13" parent="." unique_id=913434129 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, 191.1807, 57.661377, 205.00824)
+
+[node name="medium_building6" parent="." unique_id=2038114262 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, -233.8193, 50.661377, 215.00824)
+
+[node name="medium_building29" parent="." unique_id=1703351614 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, -252.8193, 50.661377, -242.99176)
+
+[node name="medium_building8" parent="." unique_id=1040070038 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, -213.8193, 50.661377, 97.00824)
+
+[node name="medium_building24" parent="." unique_id=95542357 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.44, 0, 0, 0, 1, -266.8193, 59.661377, -74.99176)
+
+[node name="medium_building23" parent="." unique_id=2065036262 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.2, 0, 0, 0, 1, -233.8193, 50.661377, -77.99176)
+
+[node name="medium_building14" parent="." unique_id=1336416803 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.2, 0, 0, 0, 1.32, 0, 0, 0, 1.1, -159.8193, 54.661377, -178.99176)
+
+[node name="medium_building25" parent="." unique_id=1485989409 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.2, 0, 0, 0, 1.32, 0, 0, 0, 1.1, -223.8193, 54.661377, -171.99176)
+
+[node name="medium_building15" parent="." unique_id=1340429460 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.6800001, 0, 0, 0, 1.08, 0, 0, 0, 1, -133.8193, 46.661377, -176.99176)
+
+[node name="medium_building20" parent="." unique_id=1763476852 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.6800001, 0, 0, 0, 1.08, 0, 0, 0, 1, 55.180695, 46.661377, -71.99176)
+
+[node name="medium_building16" parent="." unique_id=951615342 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.404, 0, 0, 0, 1, -128.8193, 58.661377, -270.99176)
+
+[node name="medium_building26" parent="." unique_id=1903800988 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.404, 0, 0, 0, 1, -258.8193, 58.661377, -143.99176)
+
+[node name="medium_building21" parent="." unique_id=725822551 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.404, 0, 0, 0, 1, 101.180695, 58.661377, -70.99176)
+
+[node name="medium_building28" parent="." unique_id=2097540512 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.404, 0, 0, 0, 1, -260.8193, 58.661377, -270.99176)
+
+[node name="medium_building22" parent="." unique_id=1063506268 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.404, 0, 0, 0, 1, 102.180695, 58.661377, -221.99176)
+
+[node name="medium_building17" parent="." unique_id=46591140 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.1232, 0, 0, 0, 1, -136.8193, 48.661377, -229.99176)
+
+[node name="medium_building19" parent="." unique_id=184096210 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.3440001, 0, 0, 0, 1.1232, 0, 0, 0, 1, -167.8193, 48.661377, -273.99176)
+
+[node name="medium_building18" parent="." unique_id=1836004337 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.0752001, 0, 0, 0, 1.01088, 0, 0, 0, 1.3, -170.8193, 44.661377, -239.99176)
+
+[node name="medium_building12" parent="." unique_id=910639463 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 0.96000004, 0, 0, 0, 1, 194.1807, 42.661377, 259.00824)
+
+[node name="medium_building7" parent="." unique_id=487749135 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.5, 0, 0, 0, 1.2, 0, 0, 0, 0.7, -199.8193, 50.661377, 215.00824)
+
+[node name="medium_building5" parent="." unique_id=2082462619 instance=ExtResource("5_xru84")]
+transform = Transform3D(1.6, 0, 0, 0, 0.8, 0, 0, 0, 1, -110.819305, 35.661377, 184.00824)
+
+[node name="medium_building10" parent="." unique_id=707501136 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.64, 0, 0, 0, 0.8, 0, 0, 0, 1, -46.819305, 35.661377, 214.00824)
+
+[node name="medium_building2" parent="." unique_id=1011516754 instance=ExtResource("5_xru84")]
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, -119.819305, 53.661377, 255.00824)
+
+[node name="medium_building4" parent="." unique_id=2109266152 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.9, 0, 0, 0, 1.3, 0, 0, 0, 1, -78.819305, 53.661377, 184.00824)
+
+[node name="medium_building9" parent="." unique_id=523504535 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.80999994, 0, 0, 0, 1.5600001, 0, 0, 0, 1, -28.819305, 63.661377, 216.00824)
+
+[node name="medium_building3" parent="." unique_id=1638853748 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.7, 0, 0, 0, 1.5600001, 0, 0, 0, 1, -104.819305, 63.661377, 213.00824)
+
+[node name="medium_building27" parent="." unique_id=1654317897 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.7, 0, 0, 0, 1.5600001, 0, 0, 0, 1, -228.8193, 63.661377, -267.99176)
+
+[node name="medium_building11" parent="." unique_id=1623902431 instance=ExtResource("5_xru84")]
+transform = Transform3D(0.93170005, 0, 0, 0, 1.5600001, 0, 0, 0, 1, 44.180695, 63.661377, 262.00824)
+
+[node name="filler_build" parent="." unique_id=758576913 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -204, 24, 252)
+
+[node name="filler_build12" parent="." unique_id=741893922 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 1, -194, 24, 160)
+
+[node name="filler_build23" parent="." unique_id=1196053312 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.44, 0, 0, 0, 1, 0, 0, 0, 1, 75, 24, 162)
+
+[node name="filler_build30" parent="." unique_id=263080442 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.44, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 133, 28, 165)
+
+[node name="filler_build37" parent="." unique_id=91335743 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.44, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 242, 28, 169)
+
+[node name="filler_build34" parent="." unique_id=1096298716 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.44, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 222, 28, 265)
+
+[node name="filler_build29" parent="." unique_id=68087964 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.44, 0, 0, 0, 1, 0, 0, 0, 1.6, 121, 24, 191)
+
+[node name="filler_build25" parent="." unique_id=2043782356 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.44, 0, 0, 0, 1, 0, 0, 0, 1, -30, 24, 247)
+
+[node name="filler_build15" parent="." unique_id=1985302749 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.5600001, 0, 0, 0, 1.5840001, 0, 0, 0, 1, -207, 32, 71)
+
+[node name="filler_build39" parent="." unique_id=921989194 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.5600001, 0, 0, 0, 1.5840001, 0, 0, 0, 1, -214, 32, -121)
+
+[node name="filler_build40" parent="." unique_id=930694573 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.5600001, 0, 0, 0, 1.5840001, 0, 0, 0, 1, -256, 37, -121)
+
+[node name="filler_build13" parent="." unique_id=1377601198 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 0.9, -214, 26, 160)
+
+[node name="filler_build18" parent="." unique_id=2055736646 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 0.9, -48, 26, 171)
+
+[node name="filler_build32" parent="." unique_id=750664879 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.1, 0, 0, 0, 0.9, 113, 26, 161)
+
+[node name="filler_build31" parent="." unique_id=2093281093 instance=ExtResource("6_7felo")]
+transform = Transform3D(0.64000005, 0, 0, 0, 0.88000005, 0, 0, 0, 1.3499999, 138, 22, 191)
+
+[node name="filler_build14" parent="." unique_id=1142307987 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1, -235, 24, 160)
+
+[node name="filler_build7" parent="." unique_id=217200141 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.43, 0, 0, 0, 2.0400002, 0, 0, 0, 1, -125, 40, 161)
+
+[node name="filler_build19" parent="." unique_id=345840842 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.287, 0, 0, 0, 2.0400002, 0, 0, 0, 1, -27, 40, 179)
+
+[node name="filler_build17" parent="." unique_id=913430614 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.43, 0, 0, 0, 2.0400002, 0, 0, 0, 1, -45, 40, 194)
+
+[node name="filler_build16" parent="." unique_id=1624850938 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.43, 0, 0, 0, 2.4480004, 0, 0, 0, 1, -44, 45, 265)
+
+[node name="filler_build43" parent="." unique_id=979347293 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.43, 0, 0, 0, 2.4480004, 0, 0, 0, 1.3, 204, 45, -232)
+
+[node name="filler_build44" parent="." unique_id=1728488621 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.43, 0, 0, 0, 2.4480004, 0, 0, 0, 1.3, 233, 45, -238)
+
+[node name="filler_build45" parent="." unique_id=834877748 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.2879999, 0, 0, 0, 2.2032003, 0, 0, 0, 1.6500001, 230, 41, -208)
+
+[node name="filler_build24" parent="." unique_id=124409968 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.43, 0, 0, 0, 2.4480004, 0, 0, 0, 1, 35, 45, 220)
+
+[node name="filler_build4" parent="." unique_id=776768026 instance=ExtResource("6_7felo")]
+transform = Transform3D(0.55, 0, 0, 0, 1.2, 0, 0, 0, 1.9599999, -137, 26, 255)
+
+[node name="filler_build2" parent="." unique_id=228449659 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, -191, 28, 251)
+
+[node name="filler_build9" parent="." unique_id=642560604 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.3, 0, 0, 0, 1, -191, 28, 180)
+
+[node name="filler_build11" parent="." unique_id=426586288 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.9000001, 0, 0, 0, 1.3, 0, 0, 0, 1, -236, 28, 178)
+
+[node name="filler_build42" parent="." unique_id=212586931 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.9000001, 0, 0, 0, 1.3, 0, 0, 0, 1, -236, 28, -220)
+
+[node name="filler_build10" parent="." unique_id=2113991658 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.43, 0, 0, 0, 1, -191, 30, 196)
+
+[node name="filler_build6" parent="." unique_id=484293364 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.8000002, 0, 0, 0, 1.8199999, 0, 0, 0, 1, -89, 36, 161)
+
+[node name="filler_build28" parent="." unique_id=589247134 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.7920002, 0, 0, 0, 2.0019999, 0, 0, 0, 1, 119, 40, 211)
+
+[node name="filler_build35" parent="." unique_id=1039917501 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.7920002, 0, 0, 0, 2.0019999, 0, 0, 0, 1, 242, 40, 250)
+
+[node name="filler_build20" parent="." unique_id=1945126062 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.8000002, 0, 0, 0, 1.8199999, 0, 0, 0, 1, 40, 36, 162)
+
+[node name="filler_build38" parent="." unique_id=228299781 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.8000002, 0, 0, 0, 1.8199999, 0, 0, 0, 1, -222, 41, -137)
+
+[node name="filler_build21" parent="." unique_id=1816277161 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.8000002, 0, 0, 0, 1.6379999, 0, 0, 0, 2.8000002, 73, 32, 194)
+
+[node name="filler_build36" parent="." unique_id=1375272352 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.8000002, 0, 0, 0, 1.6379999, 0, 0, 0, 2.2400002, 203, 32, 174)
+
+[node name="filler_build27" parent="." unique_id=1639816577 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.5200002, 0, 0, 0, 1.6379999, 0, 0, 0, 2.2400002, 124, 32, 255)
+
+[node name="filler_build33" parent="." unique_id=1625058749 instance=ExtResource("6_7felo")]
+transform = Transform3D(2.5200002, 0, 0, 0, 1.6379999, 0, 0, 0, 2.2400002, 235, 32, 212)
+
+[node name="filler_build5" parent="." unique_id=2138636645 instance=ExtResource("6_7felo")]
+transform = Transform3D(1, 0, 0, 0, 1.5600001, 0, 0, 0, 1, -132, 34, 212)
+
+[node name="filler_build3" parent="." unique_id=1093120924 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.4, 0, 0, 0, 1.8199999, 0, 0, 0, 0.9, -210, 35, 269)
+
+[node name="filler_build8" parent="." unique_id=1880706910 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.4, 0, 0, 0, 1.8199999, 0, 0, 0, 2.16, -210, 35, 188)
+
+[node name="filler_build41" parent="." unique_id=508163548 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.4, 0, 0, 0, 1.8199999, 0, 0, 0, 2.16, -214, 35, -238)
+
+[node name="filler_build22" parent="." unique_id=597195397 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.4, 0, 0, 0, 2.0019999, 0, 0, 0, 2.16, 34, 39, 188)
+
+[node name="filler_build26" parent="." unique_id=556560509 instance=ExtResource("6_7felo")]
+transform = Transform3D(1.848, 0, 0, 0, 2.0019999, 0, 0, 0, 1.944, 76, 39, 257)
+
+[node name="skyscrapers" parent="." unique_id=1418849608 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(0.9, 0, 0, 0, 1, 0, 0, 0, 0.8, -88, 84, 261)
+
+[node name="skyscrapers2" parent="." unique_id=1045179699 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(0.63, 0, 0, 0, 1.2, 0, 0, 0, 0.56, -250, 98, 96)
+
+[node name="skyscrapers4" parent="." unique_id=2105757183 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(0.81899995, 0, 0, 0, 1.2, 0, 0, 0, 0.896, 64, 98, -218)
+
+[node name="skyscrapers6" parent="." unique_id=689465715 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(1.69533, 0, 0, 0, 1.08, 0, 0, 0, 1.6128, -18, 89, -207)
+
+[node name="skyscrapers5" parent="." unique_id=1671442225 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(0.81899995, 0, 0, 0, 1.32, 0, 0, 0, 0.896, 91, 109, -182)
+
+[node name="skyscrapers3" parent="." unique_id=831561340 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(0.63, 0, 0, 0, 0.972, 0, 0, 0, 0.504, -234, 84, 72)
+
+[node name="skyscrapers7" parent="." unique_id=136491890 instance=ExtResource("7_2s6ge")]
+transform = Transform3D(0.63, 0, 0, 0, 0.972, 0, 0, 0, 0.504, -206, 84, -73)

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bufey5pe0wkm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nho3t"]
+albedo_color = Color(0.105882354, 0.105882354, 0.105882354, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_p2d6a"]
+material = SubResource("StandardMaterial3D_nho3t")
+size = Vector3(26, 0.2, 26)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14i3x"]
+size = Vector3(26, 0.2, 26)
+
+[node name="Intersection" type="Node3D" unique_id=1957669983]
+
+[node name="intersection" type="StaticBody3D" parent="." unique_id=891010777]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="intersection" unique_id=998867089]
+mesh = SubResource("BoxMesh_p2d6a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="intersection" unique_id=433239923]
+shape = SubResource("BoxShape3D_14i3x")

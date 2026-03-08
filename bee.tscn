@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://luxaskc2ikpg"]
+
+[ext_resource type="Script" uid="uid://cy6fg3vd2j5fk" path="res://bee.gd" id="1_xww1r"]
+[ext_resource type="Script" uid="uid://5tqjpubhu4dv" path="res://camera_controller.gd" id="2_v5qog"]
+[ext_resource type="PackedScene" uid="uid://bjlg2mj7umffc" path="res://protoform_rigged.tscn" id="4_b1nx6"]
+[ext_resource type="Script" uid="uid://cg306ijnlojwq" path="res://player_stats.gd" id="4_hoj8b"]
+[ext_resource type="Script" uid="uid://by36pwhlm581j" path="res://blaster.gd" id="5_sdpr3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5qog"]
+albedo_color = Color(0.6719468, 0.67044765, 3.85046e-07, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_v5qog"]
+material = SubResource("StandardMaterial3D_v5qog")
+radius = 3.0
+height = 14.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_q8d8k"]
+radius = 3.0
+height = 14.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_v5qog"]
+radius = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_q8d8k"]
+radius = 20.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_cni65"]
+size = Vector3(1, 0.8, 3)
+
+[node name="Bee" type="CharacterBody3D" unique_id=1215016783]
+floor_max_angle = 0.80285144
+floor_snap_length = 0.4
+script = ExtResource("1_xww1r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=703762279]
+visible = false
+mesh = SubResource("CapsuleMesh_v5qog")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1111110022]
+shape = SubResource("CapsuleShape3D_q8d8k")
+
+[node name="Camroot" type="Node3D" parent="." unique_id=105782241]
+script = ExtResource("2_v5qog")
+
+[node name="CamYaw" type="Node3D" parent="Camroot" unique_id=660679825]
+
+[node name="CamPitch" type="Node3D" parent="Camroot/CamYaw" unique_id=1927371366]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="Camroot/CamYaw/CamPitch" unique_id=580543977]
+shape = SubResource("SphereShape3D_v5qog")
+spring_length = 12.0
+
+[node name="Camera3D" type="Camera3D" parent="Camroot/CamYaw/CamPitch/SpringArm3D" unique_id=746565693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.748666, 0)
+current = true
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1933612265]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=288257958]
+shape = SubResource("SphereShape3D_q8d8k")
+
+[node name="PlayerStats" type="Node3D" parent="." unique_id=1170256239]
+script = ExtResource("4_hoj8b")
+
+[node name="protoform_rigged" parent="." unique_id=40615096 instance=ExtResource("4_b1nx6")]
+transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, -7.0728602, 0)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="protoform_rigged/Armature/Skeleton3D" parent_id_path=PackedInt32Array(40615096, 855416295) index="1" unique_id=1035374770]
+transform = Transform3D(0.994896, -0.012537142, 0.100122556, 0.016518084, 0.99910086, -0.03903195, -0.09954324, 0.040486503, 0.994209, -106.98497, 1308.5167, -2220.4338)
+bone_name = "mixamorig_RightHand"
+bone_idx = 14
+
+[node name="Blaster" type="Node3D" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D" unique_id=1278588870]
+transform = Transform3D(3.3036246, 19.908655, -198.97926, 199.82039, -8.09732, 2.5074058, -7.806382, -198.84189, -20.024519, 183.73105, 125.19287, 3.732666)
+script = ExtResource("5_sdpr3")
+
+[node name="GunModel" type="MeshInstance3D" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D/Blaster" unique_id=2143184421]
+mesh = SubResource("BoxMesh_cni65")
+
+[node name="MuzzlePoint" type="Marker3D" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D/Blaster" unique_id=1954470026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+
+[editable path="protoform_rigged"]

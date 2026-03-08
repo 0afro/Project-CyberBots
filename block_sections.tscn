@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cv5rtesblao2c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_53buk"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_53buk"]
+material = SubResource("StandardMaterial3D_53buk")
+size = Vector2(80, 80)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_84k6u"]
+size = Vector3(80, 0.1, 80)
+
+[node name="blockSections" type="Node3D" unique_id=472212083]
+
+[node name="blockRef" type="StaticBody3D" parent="." unique_id=1139906781]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="blockRef" unique_id=1201501857]
+mesh = SubResource("PlaneMesh_53buk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="blockRef" unique_id=752151200]
+shape = SubResource("BoxShape3D_84k6u")

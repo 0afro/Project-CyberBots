@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b2cl1bj106pfr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u6tu2"]
+albedo_color = Color(0.10747976, 0.10747973, 0.10747973, 1)
+metallic_specular = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_0cwxj"]
+material = SubResource("StandardMaterial3D_u6tu2")
+size = Vector3(26, 0.2, 80)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wxi2x"]
+size = Vector3(26, 0.2, 80)
+
+[node name="Roads" type="Node3D" unique_id=2009950286]
+
+[node name="road" type="StaticBody3D" parent="." unique_id=1198743050]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="road" unique_id=1061081736]
+mesh = SubResource("BoxMesh_0cwxj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="road" unique_id=166355319]
+shape = SubResource("BoxShape3D_wxi2x")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dmnqvd2ildmlh"]
+
+[ext_resource type="Script" uid="uid://by36pwhlm581j" path="res://blaster.gd" id="1_uyb60"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cni65"]
+size = Vector3(1, 0.8, 3)
+
+[node name="Blaster" type="Node3D" unique_id=1278588870]
+script = ExtResource("1_uyb60")
+
+[node name="GunModel" type="MeshInstance3D" parent="." unique_id=2143184421]
+mesh = SubResource("BoxMesh_cni65")
+
+[node name="MuzzlePoint" type="Marker3D" parent="." unique_id=1954470026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)

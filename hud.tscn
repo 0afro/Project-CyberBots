@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://y7qvceok1ekb"]
+
+[ext_resource type="Script" uid="uid://c4ppj2mfak8tp" path="res://hud.gd" id="1_37p78"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37p78"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+skew = Vector2(0.5, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64ctp"]
+bg_color = Color(1, 1, 1, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.23667917, 0.45717174, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8sq4i"]
+bg_color = Color(0.2, 0.2, 0.2, 1)
+skew = Vector2(0.5, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.2, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640wx"]
+bg_color = Color(0.11764706, 0.5647059, 1, 1)
+skew = Vector2(0.5, 0)
+
+[node name="HUD" type="CanvasLayer" unique_id=470935254]
+script = ExtResource("1_37p78")
+
+[node name="TopLeftContainer" type="MarginContainer" parent="." unique_id=1960895992]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 60.0
+offset_bottom = 60.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="StatsContainer" type="VBoxContainer" parent="TopLeftContainer" unique_id=1875978227]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HealthContainer" type="HBoxContainer" parent="TopLeftContainer/StatsContainer" unique_id=1438239828]
+layout_mode = 2
+
+[node name="HealthLabel" type="Label" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=1148053481]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "HP"
+
+[node name="HealthBar" type="ProgressBar" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=270229978]
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_37p78")
+theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
+value = 100.0
+show_percentage = false
+
+[node name="HealthValue" type="Label" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=1462490100]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+
+[node name="ShieldContainer" type="HBoxContainer" parent="TopLeftContainer/StatsContainer" unique_id=1047401542]
+layout_mode = 2
+
+[node name="ShieldLabel" type="Label" parent="TopLeftContainer/StatsContainer/ShieldContainer" unique_id=396751631]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "SH"
+
+[node name="ShieldBar" type="ProgressBar" parent="TopLeftContainer/StatsContainer/ShieldContainer" unique_id=256798420]
+custom_minimum_size = Vector2(200, 24)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_8sq4i")
+theme_override_styles/fill = SubResource("StyleBoxFlat_640wx")
+max_value = 50.0
+show_percentage = false
+
+[node name="ShieldValue" type="Label" parent="TopLeftContainer/StatsContainer/ShieldContainer" unique_id=1027250586]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "0"
+horizontal_alignment = 2
+
+[node name="BoostContainer" type="HBoxContainer" parent="TopLeftContainer/StatsContainer" unique_id=1146706959]
+layout_mode = 2
+
+[node name="BoostLabel" type="Label" parent="TopLeftContainer/StatsContainer/BoostContainer" unique_id=2027816704]
+layout_mode = 2
+text = "⚡"
+
+[node name="BoostValue" type="Label" parent="TopLeftContainer/StatsContainer/BoostContainer" unique_id=1548674327]
+layout_mode = 2
+text = "--"
