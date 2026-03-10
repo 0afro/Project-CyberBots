@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://5tqjpubhu4dv" path="res://camera_controller.gd" id="2_v5qog"]
 [ext_resource type="PackedScene" uid="uid://bjlg2mj7umffc" path="res://protoform_rigged.tscn" id="4_b1nx6"]
 [ext_resource type="Script" uid="uid://cg306ijnlojwq" path="res://player_stats.gd" id="4_hoj8b"]
-[ext_resource type="Script" uid="uid://by36pwhlm581j" path="res://blaster.gd" id="5_sdpr3"]
+[ext_resource type="PackedScene" uid="uid://dmnqvd2ildmlh" path="res://blaster.tscn" id="5_b1nx6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5qog"]
 albedo_color = Color(0.6719468, 0.67044765, 3.85046e-07, 1)
@@ -23,9 +23,6 @@ radius = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_q8d8k"]
 radius = 20.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_cni65"]
-size = Vector3(1, 0.8, 3)
 
 [node name="Bee" type="CharacterBody3D" unique_id=1215016783]
 floor_max_angle = 0.80285144
@@ -72,14 +69,7 @@ transform = Transform3D(0.994896, -0.012537142, 0.100122556, 0.016518084, 0.9991
 bone_name = "mixamorig_RightHand"
 bone_idx = 14
 
-[node name="Blaster" type="Node3D" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D" unique_id=1278588870]
-transform = Transform3D(3.3036246, 19.908655, -198.97926, 199.82039, -8.09732, 2.5074058, -7.806382, -198.84189, -20.024519, 183.73105, 125.19287, 3.732666)
-script = ExtResource("5_sdpr3")
-
-[node name="GunModel" type="MeshInstance3D" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D/Blaster" unique_id=2143184421]
-mesh = SubResource("BoxMesh_cni65")
-
-[node name="MuzzlePoint" type="Marker3D" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D/Blaster" unique_id=1954470026]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+[node name="Blaster" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D" unique_id=1278588870 instance=ExtResource("5_b1nx6")]
+transform = Transform3D(3.3036268, 19.908655, -198.97926, 199.82039, -8.09732, 2.5074024, -7.8063965, -198.84189, -20.024523, 168.76376, 61.127686, -28.320862)
 
 [editable path="protoform_rigged"]
