@@ -6,8 +6,8 @@
 size = Vector3(1, 0.8, 3)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_uyb60"]
-top_radius = 0.05
-bottom_radius = 0.05
+top_radius = 0.15
+bottom_radius = 0.15
 height = 100.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cni65"]

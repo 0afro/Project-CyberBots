@@ -4,7 +4,6 @@ extends Node3D
 @export var fire_rate := 0.15
 @export var max_ammo := 100
 @export var infinite_ammo := true
-@export var show_laser_sight := true  # Toggle laser always visible
 
 var current_ammo := 100
 var can_shoot := true
@@ -14,44 +13,60 @@ var can_shoot := true
 
 func _ready():
 	current_ammo = max_ammo
+	
 	if laser_beam:
-		laser_beam.visible = show_laser_sight
+		laser_beam.visible = false
 
 func _process(delta):
-	# Only update laser if it exists and should be visible
-	if not laser_beam or not show_laser_sight:
-		return
+	var is_shooting = Input.is_action_pressed("shoot")
 	
-	# Get camera
+	if laser_beam:
+		laser_beam.visible = is_shooting
+	
+	if laser_beam and laser_beam.visible:
+		update_laser_position()
+
+func get_mouse_raycast():
 	var camera = get_viewport().get_camera_3d()
 	if not camera:
-		return
+		return null
 	
-	# Raycast from camera
+	# Get mouse position on screen
+	var mouse_pos = get_viewport().get_mouse_position()
+	
+	# Project from mouse position into 3D world
+	var from = camera.project_ray_origin(mouse_pos)
+	var to = from + camera.project_ray_normal(mouse_pos) * 1000
+	
+	# Raycast
 	var space_state = get_world_3d().direct_space_state
-	var from = camera.global_position
-	var forward = -camera.global_transform.basis.z
-	var to = from + forward * 100
-	
 	var query = PhysicsRayQueryParameters3D.create(from, to)
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
 		query.exclude = [player]
 	
-	var result = space_state.intersect_ray(query)
+	return space_state.intersect_ray(query)
+
+func update_laser_position():
+	var result = get_mouse_raycast()
+	if not result:
+		return
 	
-	# Get hit point or max range
-	var hit_point = result.position if result else to
+	var hit_point = result.position if result else muzzle_point.global_position + Vector3(0, 0, -100)
 	var laser_start = muzzle_point.global_position
-	var distance = laser_start.distance_to(hit_point)
+	var laser_end = hit_point
 	
-	# Position laser
-	laser_beam.global_position = laser_start.lerp(hit_point, 0.5)
-	laser_beam.look_at(hit_point, Vector3.UP)
-	laser_beam.rotate_object_local(Vector3.RIGHT, PI / 2)
+	var distance = laser_start.distance_to(laser_end)
 	
-	# Scale laser to distance
+	var laser_center = (laser_start + laser_end) / 2.0
+	laser_beam.global_position = laser_center
+	
+	laser_beam.look_at(laser_end, Vector3.UP)
+	laser_beam.rotate_object_local(Vector3.RIGHT, deg_to_rad(90))
+	
 	laser_beam.scale.y = distance / 100.0
+	laser_beam.scale.x = 1.5
+	laser_beam.scale.z = 1.5
 
 func shoot(camera: Camera3D, player: Node3D):
 	if not can_shoot:
@@ -66,22 +81,14 @@ func shoot(camera: Camera3D, player: Node3D):
 	
 	print("Blaster fired! Ammo: ", current_ammo if not infinite_ammo else "∞")
 	
-	# Shoot from camera center
-	var space_state = get_world_3d().direct_space_state
-	var from = camera.global_position
-	var forward = -camera.global_transform.basis.z
-	var to = from + forward * 100
-	
-	var query = PhysicsRayQueryParameters3D.create(from, to)
-	query.exclude = [player]
-	
-	var result = space_state.intersect_ray(query)
+	# Shoot where mouse cursor is
+	var result = get_mouse_raycast()
 	
 	if result:
 		var hit_object = result.collider
 		var hit_position = result.position
 		
-		print("Hit: ", hit_object.name, " at ", hit_position)
+		print("Hit: ", hit_object.name)
 		
 		var final_damage = damage
 		if player.has_node("PlayerStats"):
