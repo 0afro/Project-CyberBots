@@ -80,5 +80,13 @@
 - Set up GitHub repository with proper .gitignore for Godot 4
 - Created README.md with setup instructions and feature list
 - Created DEVLOG.md for development tracking
-- [TODO: Laser sight on weapon]
-- [TODO: Enemy test dummy with health system]
+
+### 09-10/03/26 — Laser Sight & Mouse-Cursor Aiming
+- Implemented visible laser sight on blaster weapon using CylinderMesh
+- Created red glowing emissive material for laser beam
+- Laser appears only while holding shoot button for visual feedback
+- Developed mouse-cursor based aiming system using viewport raycast projection
+- Laser dynamically scales length and points from gun muzzle to mouse target
+- Updated shooting mechanics to fire at 3D position under mouse cursor
+- Configured laser thickness (radius 0.15) for optimal visibility
+- Resolved camera-relative vs mouse-cursor aiming discrepancy
