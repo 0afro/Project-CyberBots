@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bfgbgfyjpa5f2"]
+
+[ext_resource type="Script" uid="uid://bnvsicv670cn7" path="res://enemy.gd" id="1_7k104"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4gyqm"]
+radius = 3.0
+height = 14.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qi2p4"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.6666667, 0, 0, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_iifgy"]
+radius = 3.0
+height = 14.0
+
+[node name="Enemy" type="CharacterBody3D" unique_id=658768164]
+script = ExtResource("1_7k104")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=413067766]
+shape = SubResource("CapsuleShape3D_4gyqm")
+
+[node name="EnemyModel" type="MeshInstance3D" parent="." unique_id=177633273]
+material_override = SubResource("StandardMaterial3D_qi2p4")
+mesh = SubResource("CapsuleMesh_iifgy")
+
+[node name="HealthLabel" type="Label3D" parent="." unique_id=256664732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, 0)
+pixel_size = 0.05
+billboard = 2
+text = "50 HP"
+font_size = 48
