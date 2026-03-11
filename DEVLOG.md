@@ -90,3 +90,10 @@
 - Updated shooting mechanics to fire at 3D position under mouse cursor
 - Configured laser thickness (radius 0.15) for optimal visibility
 - Resolved camera-relative vs mouse-cursor aiming discrepancy
+
+### 11/03/26 — Enemy Test Dummy
+- Created enemy test dummy (CharacterBody3D) with health system (50 HP)
+- Enemy displays HP label above head with color feedback
+- Enemies destroyed when health reaches zero
+- Each enemy instance has unique material to prevent shared-state issues
+- **Placed multiple enemies in level for combat testing**
