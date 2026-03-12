@@ -10,12 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://y7qvceok1ekb" path="res://hud.tscn" id="8_d2537"]
 [ext_resource type="PackedScene" uid="uid://bfgbgfyjpa5f2" path="res://enemy.tscn" id="9_saq83"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_jbkum"]
-size = Vector3(600, 1, 600)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_yr7qn"]
-size = Vector3(600, 1, 600)
-
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_mmu3l"]
 sky_top_color = Color(0.039215688, 0.105882354, 0.18039216, 1)
 sky_horizon_color = Color(0.43529412, 0.68235296, 1, 1)
@@ -34,35 +28,29 @@ ambient_light_color = Color(0.6862745, 0.79607844, 1, 1)
 ambient_light_sky_contribution = 0.4
 ambient_light_energy = 0.35
 
+[sub_resource type="BoxMesh" id="BoxMesh_jbkum"]
+size = Vector3(600, 1, 600)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yr7qn"]
+size = Vector3(600, 1, 600)
+
 [node name="Floor1" type="Node3D" unique_id=1780886569]
 
-[node name="map" type="Node3D" parent="." unique_id=773844007]
+[node name="Bee" parent="." unique_id=1215016783 instance=ExtResource("1_4wqxu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.208332, 67.00165)
 
-[node name="River" parent="map" unique_id=405506110 instance=ExtResource("1_yr7qn")]
+[node name="HUD" parent="." unique_id=470935254 instance=ExtResource("8_d2537")]
 
-[node name="floor2" parent="map" unique_id=324469878 instance=ExtResource("2_vthxg")]
+[node name="characters" type="Node3D" parent="." unique_id=1360090397]
 
-[node name="Main_bridge" parent="map" unique_id=1239522996 instance=ExtResource("3_6k3ta")]
+[node name="Enemy2" parent="characters" unique_id=371429118 instance=ExtResource("9_saq83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.077019, 22.149122, -49.948753)
 
-[node name="Side_bridge2" parent="map" unique_id=262464912 instance=ExtResource("3_6k3ta")]
-transform = Transform3D(1.0041271, 0, 0, 0, 1, 0, 0, 0, 1, 162.06317, 0, 0)
+[node name="Enemy3" parent="characters" unique_id=798432385 instance=ExtResource("9_saq83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8379707, 22.149122, -49.948753)
 
-[node name="Side_bridge" parent="map" unique_id=1168018602 instance=ExtResource("3_6k3ta")]
-transform = Transform3D(1.0001869, 0, 0, 0, 1, 0, 0, 0, 1, -162.063, 0, 0)
-
-[node name="Road layout" parent="map" unique_id=1994405583 instance=ExtResource("4_4wqxu")]
-
-[node name="buildings_layout" parent="map" unique_id=140307090 instance=ExtResource("5_6k3ta")]
-
-[node name="Ground" type="StaticBody3D" parent="map" unique_id=448340042]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5021057, -0.8873253, 0)
-metadata/_edit_group_ = true
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="map/Ground" unique_id=1457414640]
-mesh = SubResource("BoxMesh_jbkum")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="map/Ground" unique_id=107809701]
-shape = SubResource("BoxShape3D_yr7qn")
+[node name="Enemy" parent="characters" unique_id=658768164 instance=ExtResource("9_saq83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.149122, 0)
 
 [node name="env" type="Node3D" parent="." unique_id=672341131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5021057, -0.8873253, 0)
@@ -92,18 +80,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.87326, 21.623625, 0)
 collision_layer = 2
 pickup_type = 2
 
-[node name="HUD" parent="." unique_id=470935254 instance=ExtResource("8_d2537")]
+[node name="map" type="Node3D" parent="." unique_id=773844007]
 
-[node name="characters" type="Node3D" parent="." unique_id=1360090397]
+[node name="River" parent="map" unique_id=405506110 instance=ExtResource("1_yr7qn")]
 
-[node name="Bee" parent="characters" unique_id=1215016783 instance=ExtResource("1_4wqxu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.208332, 67.00165)
+[node name="floor2" parent="map" unique_id=324469878 instance=ExtResource("2_vthxg")]
 
-[node name="Enemy" parent="characters" unique_id=658768164 instance=ExtResource("9_saq83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.149122, 0)
+[node name="Main_bridge" parent="map" unique_id=1239522996 instance=ExtResource("3_6k3ta")]
 
-[node name="Enemy2" parent="characters" unique_id=371429118 instance=ExtResource("9_saq83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.077019, 22.149122, -49.948753)
+[node name="Side_bridge2" parent="map" unique_id=262464912 instance=ExtResource("3_6k3ta")]
+transform = Transform3D(1.0041271, 0, 0, 0, 1, 0, 0, 0, 1, 162.06317, 0, 0)
 
-[node name="Enemy3" parent="characters" unique_id=798432385 instance=ExtResource("9_saq83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8379707, 22.149122, -49.948753)
+[node name="Side_bridge" parent="map" unique_id=1168018602 instance=ExtResource("3_6k3ta")]
+transform = Transform3D(1.0001869, 0, 0, 0, 1, 0, 0, 0, 1, -162.063, 0, 0)
+
+[node name="Road layout" parent="map" unique_id=1994405583 instance=ExtResource("4_4wqxu")]
+
+[node name="buildings_layout" parent="map" unique_id=140307090 instance=ExtResource("5_6k3ta")]
+
+[node name="Ground" type="StaticBody3D" parent="map" unique_id=448340042]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5021057, -0.8873253, 0)
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="map/Ground" unique_id=1457414640]
+mesh = SubResource("BoxMesh_jbkum")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="map/Ground" unique_id=107809701]
+shape = SubResource("BoxShape3D_yr7qn")
