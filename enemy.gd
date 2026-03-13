@@ -7,18 +7,18 @@ extends CharacterBody3D
 @export var gravity := 40.0
 
 # Shooting stats
-@export var damage := 5.0
-@export var shoot_range := 40.0
-@export var fire_rate := 1.0
+@export var damage := 3.0  # Reduced damage
+@export var shoot_range := 55.0
+@export var fire_rate := 2.0  # Slower fire rate
 
 var current_health := 50.0
 var player: Node3D = null
-var can_shoot := true
+var can_shoot := false  # Changed to false - will be enabled after random delay
 
 @onready var health_label = $HealthLabel if has_node("HealthLabel") else null
 @onready var mesh = $EnemyModel
 @onready var laser = $EnemyLaser if has_node("EnemyLaser") else null
-@onready var muzzle_point = $MuzzlePoint if has_node("MuzzlePoint") else null  
+@onready var muzzle_point = $MuzzlePoint if has_node("MuzzlePoint") else null
 
 func _ready():
 	current_health = max_health
@@ -32,12 +32,17 @@ func _ready():
 	update_health_display()
 	print("Enemy spawned with ", max_health, " HP")
 	
-	# Wait for player to load, then find it
+	# Wait for player to load
 	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
 	
 	if not player:
 		print("ERROR: Enemy could not find player!")
+	
+	# Random initial delay so enemies don't shoot in sync
+	var initial_delay = randf_range(0.0, fire_rate)
+	await get_tree().create_timer(initial_delay).timeout
+	can_shoot = true  # Now ready to shoot at different times
 
 func _physics_process(delta):
 	# Apply gravity
@@ -103,14 +108,22 @@ func shoot_at_player():
 	
 	# Shoot from muzzle point (gun tip) or fallback to center
 	var shoot_from = muzzle_point.global_position if muzzle_point else global_position + Vector3(0, 5, 0)
-	var shoot_to = player.global_position + Vector3(0, 5, 0)  # Aim at player center
 	
-	# Raycast from gun to player
+	# Add random inaccuracy to aim
+	var accuracy_spread = 3.0  # Adjust for difficulty (higher = more miss)
+	var random_offset = Vector3(
+		randf_range(-accuracy_spread, accuracy_spread),
+		randf_range(-accuracy_spread, accuracy_spread),
+		randf_range(-accuracy_spread, accuracy_spread)
+	)
+	var shoot_to = player.global_position + Vector3(0, 5, 0) + random_offset
+	
+	# Raycast from gun to player (with inaccuracy)
 	var space_state = get_world_3d().direct_space_state
 	var query = PhysicsRayQueryParameters3D.create(shoot_from, shoot_to)
 	query.exclude = [self]  # Don't hit ourselves
 	
-	# Update laser to point from gun to player
+	# Update laser to point from gun to target (shows inaccuracy visually)
 	if laser:
 		var distance = shoot_from.distance_to(shoot_to)
 		var laser_center = (shoot_from + shoot_to) / 2.0
@@ -136,11 +149,13 @@ func shoot_at_player():
 				var stats = player.get_node("PlayerStats")
 				stats.take_damage(damage)
 		else:
-			print("Enemy shot blocked by: ", hit_object.name)
+			print("Enemy shot missed - hit: ", hit_object.name)
+	else:
+		print("Enemy shot missed completely!")
 	
 	# Hide laser after brief flash
 	if laser:
-		await get_tree().create_timer(0.15).timeout
+		await get_tree().create_timer(0.05).timeout
 		if laser:  # Safety check in case enemy died
 			laser.visible = false
 	

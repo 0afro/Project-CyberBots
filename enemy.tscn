@@ -30,8 +30,8 @@ albedo_color = Color(1, 0.53333336, 0, 0.5019608)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_epg4t"]
 material = SubResource("StandardMaterial3D_iifgy")
-top_radius = 0.12
-bottom_radius = 0.12
+top_radius = 0.2
+bottom_radius = 0.2
 height = 100.0
 
 [node name="Enemy" type="CharacterBody3D" unique_id=658768164]
