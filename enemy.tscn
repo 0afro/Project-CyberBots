@@ -16,6 +16,24 @@ emission_energy_multiplier = 0.5
 radius = 3.0
 height = 14.0
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7k104"]
+albedo_color = Color(0.26666668, 0.26666668, 0.26666668, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4gyqm"]
+material = SubResource("StandardMaterial3D_7k104")
+size = Vector3(1.5, 1.5, 5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iifgy"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 0.53333336, 0, 0.5019608)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_epg4t"]
+material = SubResource("StandardMaterial3D_iifgy")
+top_radius = 0.12
+bottom_radius = 0.12
+height = 100.0
+
 [node name="Enemy" type="CharacterBody3D" unique_id=658768164]
 script = ExtResource("1_7k104")
 
@@ -32,3 +50,14 @@ pixel_size = 0.05
 billboard = 2
 text = "50 HP"
 font_size = 48
+
+[node name="EnemyGun" type="MeshInstance3D" parent="." unique_id=730813190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6234798, 1.5481291, -1.5386271)
+mesh = SubResource("BoxMesh_4gyqm")
+
+[node name="EnemyLaser" type="MeshInstance3D" parent="." unique_id=400495396]
+visible = false
+mesh = SubResource("CylinderMesh_epg4t")
+
+[node name="MuzzlePoint" type="Marker3D" parent="." unique_id=1082950441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.623, 1.548, -4.03)

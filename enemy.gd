@@ -3,14 +3,22 @@ extends CharacterBody3D
 # Enemy stats
 @export var max_health := 50.0
 @export var move_speed := 15.0
-@export var stop_distance := 50
+@export var stop_distance := 50.0
 @export var gravity := 40.0
+
+# Shooting stats
+@export var damage := 5.0
+@export var shoot_range := 40.0
+@export var fire_rate := 1.0
 
 var current_health := 50.0
 var player: Node3D = null
+var can_shoot := true
 
 @onready var health_label = $HealthLabel if has_node("HealthLabel") else null
 @onready var mesh = $EnemyModel
+@onready var laser = $EnemyLaser if has_node("EnemyLaser") else null
+@onready var muzzle_point = $MuzzlePoint if has_node("MuzzlePoint") else null  
 
 func _ready():
 	current_health = max_health
@@ -24,17 +32,22 @@ func _ready():
 	update_health_display()
 	print("Enemy spawned with ", max_health, " HP")
 	
-	# Find player
+	# Wait for player to load, then find it
+	await get_tree().process_frame
 	player = get_tree().get_first_node_in_group("player")
+	
+	if not player:
+		print("ERROR: Enemy could not find player!")
 
 func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 	
-	# AI behavior - chase player
+	# AI behavior - chase and shoot player
 	if player:
 		ai_chase_player(delta)
+		ai_shoot_player()
 	
 	# Move
 	move_and_slide()
@@ -49,7 +62,7 @@ func ai_chase_player(delta):
 		# Normalize direction
 		direction_to_player = direction_to_player.normalized()
 		
-		# Remove Y component (only move on ground)
+		# Remove Y component (only move on ground plane)
 		direction_to_player.y = 0
 		direction_to_player = direction_to_player.normalized()
 		
@@ -63,6 +76,78 @@ func ai_chase_player(delta):
 		# Stop moving when close
 		velocity.x = 0
 		velocity.z = 0
+		
+		# Still face player when stopped
+		look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
+
+func ai_shoot_player():
+	# Only shoot if can shoot and player exists and player is in range
+	if not can_shoot or not player:
+		return
+	
+	var distance_to_player = global_position.distance_to(player.global_position)
+	
+	# Check if player is in shooting range
+	if distance_to_player <= shoot_range:
+		shoot_at_player()
+
+func shoot_at_player():
+	if not can_shoot:
+		return
+	
+	print("Enemy shooting at player!")
+	
+	# Show laser
+	if laser:
+		laser.visible = true
+	
+	# Shoot from muzzle point (gun tip) or fallback to center
+	var shoot_from = muzzle_point.global_position if muzzle_point else global_position + Vector3(0, 5, 0)
+	var shoot_to = player.global_position + Vector3(0, 5, 0)  # Aim at player center
+	
+	# Raycast from gun to player
+	var space_state = get_world_3d().direct_space_state
+	var query = PhysicsRayQueryParameters3D.create(shoot_from, shoot_to)
+	query.exclude = [self]  # Don't hit ourselves
+	
+	# Update laser to point from gun to player
+	if laser:
+		var distance = shoot_from.distance_to(shoot_to)
+		var laser_center = (shoot_from + shoot_to) / 2.0
+		
+		laser.global_position = laser_center
+		laser.look_at(shoot_to, Vector3.UP)
+		laser.rotate_object_local(Vector3.RIGHT, deg_to_rad(90))
+		laser.scale.y = distance / 100.0
+		laser.scale.x = 1.0
+		laser.scale.z = 1.0
+	
+	var result = space_state.intersect_ray(query)
+	
+	if result:
+		var hit_object = result.collider
+		
+		# Check if we hit the player
+		if hit_object == player:
+			print("Enemy hit player for ", damage, " damage!")
+			
+			# Damage player
+			if player.has_node("PlayerStats"):
+				var stats = player.get_node("PlayerStats")
+				stats.take_damage(damage)
+		else:
+			print("Enemy shot blocked by: ", hit_object.name)
+	
+	# Hide laser after brief flash
+	if laser:
+		await get_tree().create_timer(0.15).timeout
+		if laser:  # Safety check in case enemy died
+			laser.visible = false
+	
+	# Start cooldown
+	can_shoot = false
+	await get_tree().create_timer(fire_rate).timeout
+	can_shoot = true
 
 func take_damage(amount: float):
 	current_health -= amount
@@ -91,7 +176,7 @@ func flash_damage():
 			material.albedo_color = Color.WHITE
 			if material.emission_enabled:
 				material.emission = Color.WHITE
-				material.emission_energy_multiplier = 3.0  # Bright flash
+				material.emission_energy_multiplier = 3.0
 			
 			await get_tree().create_timer(0.1).timeout
 			
@@ -106,6 +191,7 @@ func update_health_display():
 	if health_label:
 		health_label.text = str(int(current_health)) + " HP"
 		
+		# Change color based on health
 		if current_health <= 0:
 			health_label.modulate = Color.DARK_GRAY
 		elif current_health < max_health * 0.3:
@@ -115,4 +201,4 @@ func update_health_display():
 
 func die():
 	print("Enemy destroyed!")
-	queue_free()
+	queue_free()  # Remove from scene
