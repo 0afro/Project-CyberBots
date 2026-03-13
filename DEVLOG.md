@@ -97,3 +97,14 @@
 - Enemies destroyed when health reaches zero
 - Each enemy instance has unique material to prevent shared-state issues
 - **Placed multiple enemies in level for combat testing**
+
+### 12-13/03/26 — Enemy AI Chase & Combat System
+- Implemented basic enemy AI with chase behavior and tactical positioning
+- Enemies track and move toward player (15 units/sec), stopping at distance (50 units) for ranged combat
+- Enemies continuously face player and apply gravity to stay grounded
+- Added shooting system: enemies fire at player within range (55 units) every 1.2 seconds
+- Equipped enemies with visual gun mesh and orange laser sight (shoots from MuzzlePoint)
+- Enemies deal 3 HP damage per shot, reduced for balanced difficulty
+- Made sure obstacles block enemy shots
+- Increased player speeds (walk: 35, sprint: 50) for better combat mobility and kiting
+- **Implementing shooting inaccuracy and staggered firing with random delays to balance combat**
