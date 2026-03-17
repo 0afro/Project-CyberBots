@@ -107,4 +107,19 @@
 - Enemies deal 3 HP damage per shot, reduced for balanced difficulty
 - Made sure obstacles block enemy shots
 - Increased player speeds (walk: 35, sprint: 50) for better combat mobility and kiting
-- **Implementing shooting inaccuracy and staggered firing with random delays to balance combat**
+- Implemented shooting inaccuracy and staggered firing with random delays to balance combat
+
+### 17/03/26 — Health rework/overhaul
+- Implemented Transformers: War for Cybertron inspired segmented health system
+- Increased player max health from 100 HP to 200 HP for better balance
+- Health divided into 4 blocks of 50 HP each
+- Added automatic health regeneration: 5 HP/sec after 3-second delay from last damage
+- Regeneration capped at current block maximum - once a block is depleted, max regen capacity reduces e.g losing Block 4 (going below 150 HP) means player can only regenerate up to 150 HP max
+- Health pickups now restore all lost blocks and refill to maximum health (200 HP) but might get respawn rate nerf 
+- Redesigned HUD to visually show segmented health bar with divider lines
+- Health bar displays in bright cyan blue like in Transformers WFC
+- Health bar turns red when critical (50 HP or below - Block 1 only)
+- Added three skewed divider lines at 25%, 50%, 75% to mark health block boundaries
+- Dividers match health bar slant angle (0.38 radians rotation)
+- Enlarged HUD bars for better visibility (250x30 pixels)
+- Console logging added for health block loss events and regeneration
