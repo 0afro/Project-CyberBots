@@ -77,7 +77,7 @@ func interact():
 		
 		match pickup_type:
 			PickupType.HEALTH:
-				stats.heal(health_amount)
+				stats.restore_health_blocks()
 			PickupType.ENERGON_SHIELD:
 				stats.add_shield(shield_amount)
 			PickupType.ENERGON_DAMAGE:

@@ -55,7 +55,7 @@ theme_override_font_sizes/font_size = 16
 text = "HP"
 
 [node name="HealthBar" type="ProgressBar" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=270229978]
-custom_minimum_size = Vector2(200, 24)
+custom_minimum_size = Vector2(250, 30)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_37p78")
 theme_override_styles/fill = SubResource("StyleBoxFlat_64ctp")
@@ -65,8 +65,23 @@ show_percentage = false
 [node name="HealthValue" type="Label" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=1462490100]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 2
-text = "100"
+text = "200"
 horizontal_alignment = 2
+
+[node name="HealthDivider1" type="ColorRect" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=223173604]
+custom_minimum_size = Vector2(2, 30)
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="HealthDivider2" type="ColorRect" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=957954704]
+custom_minimum_size = Vector2(2, 30)
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="HealthDivider3" type="ColorRect" parent="TopLeftContainer/StatsContainer/HealthContainer" unique_id=1688747809]
+custom_minimum_size = Vector2(2, 30)
+layout_mode = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
 
 [node name="ShieldContainer" type="HBoxContainer" parent="TopLeftContainer/StatsContainer" unique_id=1047401542]
 layout_mode = 2
@@ -78,7 +93,7 @@ theme_override_font_sizes/font_size = 16
 text = "SH"
 
 [node name="ShieldBar" type="ProgressBar" parent="TopLeftContainer/StatsContainer/ShieldContainer" unique_id=256798420]
-custom_minimum_size = Vector2(200, 24)
+custom_minimum_size = Vector2(250, 30)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_8sq4i")
 theme_override_styles/fill = SubResource("StyleBoxFlat_640wx")
