@@ -42,7 +42,6 @@ A low-poly third-person shooter where players control giant robots (Vanguard) de
 - No external plugins or assets required
 
 ## Known Limitations / Not Yet Implemented
-- No enemy AI (static test dummies only)
 - No wave spawning system
 - No boss fight
 - Character stays in T-pose (no animations)
