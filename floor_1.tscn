@@ -43,14 +43,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.208332, 67.00165)
 
 [node name="characters" type="Node3D" parent="." unique_id=1360090397]
 
-[node name="Enemy2" parent="characters" unique_id=371429118 instance=ExtResource("9_saq83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.077019, 22.149122, -49.948753)
-
-[node name="Enemy3" parent="characters" unique_id=798432385 instance=ExtResource("9_saq83")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8379707, 22.149122, -49.948753)
-
 [node name="Enemy" parent="characters" unique_id=658768164 instance=ExtResource("9_saq83")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.149122, 0)
+
+[node name="Enemy2" parent="characters" unique_id=1559638750 instance=ExtResource("9_saq83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.149122, -7.99148)
+
+[node name="Enemy3" parent="characters" unique_id=1725728956 instance=ExtResource("9_saq83")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.430313, 22.149122, -7.99148)
 
 [node name="env" type="Node3D" parent="." unique_id=672341131]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5021057, -0.8873253, 0)
