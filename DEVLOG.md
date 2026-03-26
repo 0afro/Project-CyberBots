@@ -99,7 +99,7 @@
 - **Placed multiple enemies in level for combat testing**
 
 ### 12-13/03/26 — Enemy AI Chase & Combat System
-- Implemented basic enemy AI with chase behavior and tactical positioning
+- Implemented basic enemy AI with chase behaviour and tactical positioning
 - Enemies track and move toward player (15 units/sec), stopping at distance (50 units) for ranged combat
 - Enemies continuously face player and apply gravity to stay grounded
 - Added shooting system: enemies fire at player within range (55 units) every 1.2 seconds
@@ -123,3 +123,22 @@
 - Dividers match health bar slant angle (0.38 radians rotation)
 - Enlarged HUD bars for better visibility (250x30 pixels)
 - Console logging added for health block loss events and regeneration
+
+### Reason for gap between last update was becasue I was sick for the apst 2 weeks and then my pc corrupted so I had to get a new ssd and wipe everything. Luckily all project progress was pushed to git beforehand.
+
+### 25-26/03/26 — Enemy AI Roaming & Chase Behaviour
+- Enemies now positioned and spread out to prevent swarming
+- Implemented three-state AI system for enemies: Roaming, Chasing, and Shooting
+- Added territorial roaming behaviour where enemies patrol within designated radius of spawn point
+- Enemies now only chase player when within detection range
+- Enemies abandon chase and return to patrol if player escapes beyond 70 units or if enemy strays too far from spawn
+- Reduced roaming speed (8 units/sec) compared to chase speed (15 units/sec) 
+- Enemies pause for 2 seconds at each patrol point before selecting new random destination
+- Matched shoot_range to stop_distance (both 50 units) to stop awkward standing phase
+- Shooting triggers enemy alert state - damaged enemies immediately enter chase mode (requires improvment)
+- Console logging added for AI state changes and debugging
+- Added state change cooldown (0.3-0.5 seconds) to prevent rapid state flickering and visual bugs
+- State transitions include small buffer zones to prevent jittering between states
+- Added spawn position boundaries to prevent enemies from falling off platforms or wandering too far
+
+
