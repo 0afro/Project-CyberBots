@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ctly0dx7xkk28"]
+
+[ext_resource type="PackedScene" uid="uid://3q87ipeq4t4f" path="res://assets/buildings/models/low-detail-building-wide-b.glb" id="1_4gomo"]
+[ext_resource type="Texture2D" uid="uid://dl642i6wchffp" path="res://assets/buildings/Textures/colormap.png" id="2_mpr3p"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrmtk"]
+albedo_texture = ExtResource("2_mpr3p")
+
+[node name="low-detail-building-wide-b2" unique_id=575442097 instance=ExtResource("1_4gomo")]
+
+[node name="low-detail-building-wide-b" parent="." index="0" unique_id=1665832790]
+surface_material_override/0 = SubResource("StandardMaterial3D_nrmtk")

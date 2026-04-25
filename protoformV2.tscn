@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cy3n0h2wren8f"]
+
+[ext_resource type="PackedScene" uid="uid://cy3n0h2wren8f" path="res://protoformV2.tscn" id="1_ywniq"]
+
+[node name="protoform" unique_id=511802213 instance=ExtResource("1_ywniq")]
+
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(616621604) index="0" unique_id=1012042658]
+bones/0/rotation = Quaternion(1.5062458e-08, -0.707107, -1.5062456e-08, 0.70710653)
+bones/1/rotation = Quaternion(2.5535133e-14, 3.725289e-08, 0.060058814, 0.99819493)
+bones/8/rotation = Quaternion(0.029512227, -0.64069974, 0.7670086, 0.018190484)
+bones/9/rotation = Quaternion(-0.041169655, -0.00039747843, 0.00961283, 0.9991059)
+bones/10/rotation = Quaternion(-0.02795786, -0.00059059134, 0.021330673, 0.9993814)
+bones/13/rotation = Quaternion(0.7708845, 0.007998459, -0.007117927, 0.63688505)
+bones/14/rotation = Quaternion(-0.052901402, -0.0051363274, 0.096445024, 0.99391824)
+bones/15/rotation = Quaternion(-0.022925837, 0.0017541046, -0.07631766, 0.9968184)
+bones/18/rotation = Quaternion(-0.00020147802, 0.03384362, 0.99940944, 0.0059624966)
+bones/19/rotation = Quaternion(-0.06562472, 0.004941233, -0.074912384, 0.99501616)
+bones/20/rotation = Quaternion(0.4849143, -0.49629897, 0.4035233, 0.5964181)
+bones/21/position = Vector3(2.3126631e-07, 5.520468, -1.5239715e-05)
+bones/22/position = Vector3(4.8142665e-06, 2.5934954, -1.510471e-05)
+bones/24/rotation = Quaternion(-0.0052571986, -0.033419695, 0.98728836, -0.15529722)
+bones/25/rotation = Quaternion(0.2507025, 0.59621716, -0.2033485, 0.7350665)
+bones/26/rotation = Quaternion(0.009423202, 0.7445374, -0.66743153, 0.0105064865)

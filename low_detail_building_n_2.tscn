@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bba4w8pg26ekk"]
+
+[ext_resource type="PackedScene" uid="uid://dbxsl0ye7s555" path="res://assets/buildings/models/low-detail-building-n.glb" id="1_di4y2"]
+[ext_resource type="Texture2D" uid="uid://dl642i6wchffp" path="res://assets/buildings/Textures/colormap.png" id="2_yd750"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ecyta"]
+albedo_texture = ExtResource("2_yd750")
+
+[node name="low-detail-building-n2" unique_id=1912375545 instance=ExtResource("1_di4y2")]
+
+[node name="low-detail-building-n" parent="." index="0" unique_id=999269986]
+surface_material_override/0 = SubResource("StandardMaterial3D_ecyta")

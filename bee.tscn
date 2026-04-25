@@ -2,9 +2,12 @@
 
 [ext_resource type="Script" uid="uid://cy6fg3vd2j5fk" path="res://bee.gd" id="1_xww1r"]
 [ext_resource type="Script" uid="uid://5tqjpubhu4dv" path="res://camera_controller.gd" id="2_v5qog"]
-[ext_resource type="PackedScene" uid="uid://bjlg2mj7umffc" path="res://protoform_rigged.tscn" id="4_b1nx6"]
 [ext_resource type="Script" uid="uid://cg306ijnlojwq" path="res://player_stats.gd" id="4_hoj8b"]
 [ext_resource type="PackedScene" uid="uid://dmnqvd2ildmlh" path="res://blaster.tscn" id="5_b1nx6"]
+[ext_resource type="PackedScene" uid="uid://dor1nwsanjw6u" path="res://models/protoformV2.fbx" id="5_jalfw"]
+[ext_resource type="Animation" uid="uid://dqfey84imlleu" path="res://models/animations/idle.res" id="7_n1pvp"]
+[ext_resource type="Animation" uid="uid://pox3kms2kf1m" path="res://models/animations/run.res" id="8_kkj62"]
+[ext_resource type="Animation" uid="uid://x1xrhvth0hnj" path="res://models/animations/walk.res" id="9_27my7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v5qog"]
 albedo_color = Color(0.6719468, 0.67044765, 3.85046e-07, 1)
@@ -23,6 +26,13 @@ radius = 1.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_q8d8k"]
 radius = 20.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rukt1"]
+_data = {
+&"idle": ExtResource("7_n1pvp"),
+&"run": ExtResource("8_kkj62"),
+&"walk": ExtResource("9_27my7")
+}
 
 [node name="Bee" type="CharacterBody3D" unique_id=1215016783]
 floor_max_angle = 0.80285144
@@ -61,15 +71,42 @@ shape = SubResource("SphereShape3D_q8d8k")
 [node name="PlayerStats" type="Node3D" parent="." unique_id=1170256239]
 script = ExtResource("4_hoj8b")
 
-[node name="protoform_rigged" parent="." unique_id=40615096 instance=ExtResource("4_b1nx6")]
-transform = Transform3D(-2.1855694e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, -2.1855694e-08, 0, -7.0728602, 0)
+[node name="protoform" parent="." unique_id=2098965031 instance=ExtResource("5_jalfw")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, -7.0987663, 0.7799444)
 
-[node name="BoneAttachment3D" type="BoneAttachment3D" parent="protoform_rigged/Armature/Skeleton3D" parent_id_path=PackedInt32Array(40615096, 855416295) index="1" unique_id=1035374770]
-transform = Transform3D(0.994896, -0.012537142, 0.100122556, 0.016518084, 0.99910086, -0.03903195, -0.09954324, 0.040486503, 0.994209, -106.98497, 1308.5167, -2220.4338)
+[node name="Skeleton3D" parent="protoform" index="0" unique_id=1069799452]
+bones/0/position = Vector3(-0.0017419457, 16.170855, -0.23181956)
+bones/0/rotation = Quaternion(0.00059657305, -0.7071249, 0.00056681066, 0.7070882)
+bones/1/rotation = Quaternion(-0.00082156644, 1.9147798e-05, -0.008281987, 0.9999654)
+bones/2/rotation = Quaternion(-0.00595731, 0.00634748, -0.01305846, 0.99987686)
+bones/3/rotation = Quaternion(-0.00600599, 0.0064072832, -0.013119906, 0.99987537)
+bones/4/rotation = Quaternion(0.01513418, 0.046618853, -0.012730034, 0.998717)
+bones/5/rotation = Quaternion(0.018913979, -0.09321657, -0.027054895, 0.9950985)
+bones/7/rotation = Quaternion(0.025728548, -0.6477583, 0.7612352, 0.016382879)
+bones/8/rotation = Quaternion(-0.07997836, -0.0020569833, 0.030474545, 0.9963286)
+bones/9/rotation = Quaternion(-2.3193935e-07, 6.713238e-05, -2.2872965e-07, 1)
+bones/11/rotation = Quaternion(0.7609798, -0.020769184, 0.033107955, 0.6475973)
+bones/12/rotation = Quaternion(-0.07968877, 0.0037808532, -0.03910039, 0.99604553)
+bones/13/rotation = Quaternion(3.0082782e-07, -0.00014270897, 3.5798075e-07, 1)
+bones/15/rotation = Quaternion(-0.0009211971, 0.030370867, 0.9984896, -0.045775212)
+bones/16/rotation = Quaternion(-0.05615516, 0.0066848183, -0.116235405, 0.9916105)
+bones/17/rotation = Quaternion(0.48110208, -0.493453, 0.39189148, 0.60948014)
+bones/18/rotation = Quaternion(0.189474, -0.010811051, -0.05593105, 0.9802318)
+bones/20/rotation = Quaternion(-0.00016920827, -0.028788958, 0.9995521, -0.008175273)
+bones/21/rotation = Quaternion(0.057394467, -0.0036386459, -0.051346894, 0.99702364)
+bones/22/rotation = Quaternion(-0.3592085, 0.64451414, -0.4577339, -0.49603486)
+bones/23/rotation = Quaternion(0.23156641, -0.084594384, 0.014521112, 0.9690253)
+
+[node name="BoneAttachment3D" type="BoneAttachment3D" parent="protoform/Skeleton3D" index="1" unique_id=1675335696]
+transform = Transform3D(0.025469802, -0.9993885, -0.02395039, -0.044421397, 0.022803094, -0.9987526, 0.9986881, 0.026501894, -0.043813445, -13.433327, 22.895065, 0.027810082)
 bone_name = "mixamorig_RightHand"
 bone_idx = 14
 
-[node name="Blaster" parent="protoform_rigged/Armature/Skeleton3D/BoneAttachment3D" unique_id=1278588870 instance=ExtResource("5_b1nx6")]
-transform = Transform3D(3.3036268, 19.908655, -198.97926, 199.82039, -8.09732, 2.5074024, -7.8063965, -198.84189, -20.024523, 168.76376, 61.127686, -28.320862)
+[node name="Blaster" parent="protoform/Skeleton3D/BoneAttachment3D" unique_id=1278588870 instance=ExtResource("5_b1nx6")]
+transform = Transform3D(0.09992722, -0.072433695, -1.9961874, -1.9972353, 0.029008929, -0.101032265, 0.03261288, 1.9984759, -0.070884176, 2.5642302, 0.81502247, -0.0022830963)
 
-[editable path="protoform_rigged"]
+[node name="AnimationPlayer" parent="protoform" index="1" unique_id=138887530]
+libraries/animations = SubResource("AnimationLibrary_rukt1")
+autoplay = &"animations/idle"
+
+[editable path="protoform"]

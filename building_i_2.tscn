@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://byh6afh7tn8dx"]
+
+[ext_resource type="PackedScene" uid="uid://s703dpvsfi0y" path="res://assets/buildings/models/building-i.glb" id="1_kiy5n"]
+
+[node name="building-i2" unique_id=354807533 instance=ExtResource("1_kiy5n")]

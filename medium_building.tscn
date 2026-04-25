@@ -1,18 +1,26 @@
-[gd_scene format=3 uid="uid://dbd71yfyxgpq6"]
+[gd_scene format=3 uid="uid://jje3s21g7ve6"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_axdax"]
-size = Vector3(25, 70, 25)
+[ext_resource type="PackedScene" uid="uid://byh6afh7tn8dx" path="res://building_i_2.tscn" id="1_hihdc"]
+[ext_resource type="Texture2D" uid="uid://dl642i6wchffp" path="res://assets/buildings/Textures/colormap.png" id="2_tex"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jbjeo"]
-size = Vector3(25, 70, 25)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mat"]
+albedo_texture = ExtResource("2_tex")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hihdc"]
+size = Vector3(1.2631226, 1.692627, 1.2565918)
 
 [node name="medium_building" type="Node3D" unique_id=1815750143]
 
-[node name="Mid" type="StaticBody3D" parent="." unique_id=360095422]
-metadata/_edit_group_ = true
+[node name="building-i2" parent="." unique_id=354807533 instance=ExtResource("1_hihdc")]
+transform = Transform3D(34.00787, 0, 0, 0, 42.200832, 0, 0, 0, 23.688084, 0, 0, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Mid" unique_id=756294605]
-mesh = SubResource("BoxMesh_axdax")
+[node name="building-i" parent="building-i2" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_mat")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Mid" unique_id=1317420083]
-shape = SubResource("BoxShape3D_jbjeo")
+[node name="StaticBody3D" type="StaticBody3D" parent="building-i2/building-i" parent_id_path=PackedInt32Array(354807533, 166941443) index="0" unique_id=1096910684]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="building-i2/building-i/StaticBody3D" unique_id=226894024]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, -0.0047302237, 0.8480561, 0.00085449126)
+shape = SubResource("BoxShape3D_hihdc")
+
+[editable path="building-i2"]

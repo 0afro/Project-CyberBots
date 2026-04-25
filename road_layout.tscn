@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://b2cl1bj106pfr" path="res://roads.tscn" id="3_mfseg"]
 [ext_resource type="PackedScene" uid="uid://bufey5pe0wkm" path="res://intersection.tscn" id="4_mfseg"]
-[ext_resource type="PackedScene" uid="uid://cv5rtesblao2c" path="res://block_sections.tscn" id="5_2xbu7"]
-[ext_resource type="PackedScene" uid="uid://mdbqyfnsxq3j" path="res://pavement.tscn" id="6_2xbu7"]
+[ext_resource type="PackedScene" path="res://block_sections.tscn" id="5_2xbu7"]
+[ext_resource type="PackedScene" path="res://pavement.tscn" id="6_2xbu7"]
 
 [node name="Road layout" type="Node3D" unique_id=1994405583]
 
