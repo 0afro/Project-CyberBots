@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://be0sxbwpjcmlw"]
+
+[ext_resource type="Texture2D" uid="uid://cwiv5fyonkgsy" path="res://cybertron_planet_by_jjasso_d2ia99o Fixed.jpg" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://cu61kva0dhs7u" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://bbdu6ufeu6olp" path="res://Transformers Movie.ttf" id="2_7vrkn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7vrkn"]
+bg_color = Color(0.16470589, 0.16470589, 0.16470589, 0.8392157)
+border_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fu7sn"]
+bg_color = Color(0.16470589, 0.16470589, 0.16470589, 0.8392157)
+
+[node name="MainMenu" type="Control" unique_id=1812871842]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fu7sn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1155468767]
+layout_mode = 1
+offset_right = 1500.0
+offset_bottom = 844.0
+texture = ExtResource("1_06t4h")
+
+[node name="Label" type="Label" parent="." unique_id=258922860]
+layout_mode = 1
+offset_left = 53.0
+offset_top = 83.0
+offset_right = 612.0
+offset_bottom = 163.0
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.3019608, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 62
+text = "PROJECT CYBERBOTS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1623070472]
+layout_mode = 1
+offset_left = 97.0
+offset_top = 151.0
+offset_right = 610.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.3019608, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 46
+text = "BATTLE for NEW YORK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1671477242]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_top = 280.0
+offset_right = 360.0
+offset_bottom = 505.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=770385061]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_pressed_color = Color(0, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 49
+theme_override_styles/normal = SubResource("StyleBoxFlat_7vrkn")
+text = "START GAME"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=769522359]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_hover_color = Color(1, 0.64705884, 0, 1)
+theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_font_sizes/font_size = 59
+theme_override_styles/normal = SubResource("StyleBoxFlat_fu7sn")
+text = "QUIT"

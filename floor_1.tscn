@@ -1615,13 +1615,32 @@ environment = SubResource("Environment_saq83")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.623625, 0)
 collision_layer = 2
 
+[node name="health2" parent="power-ups" unique_id=399510227 instance=ExtResource("7_mmu3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.94857, 21.08581, -94.10952)
+collision_layer = 2
+
 [node name="shield" parent="power-ups" unique_id=1367211540 instance=ExtResource("7_mmu3l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.057408, 21.623625, 0)
 collision_layer = 2
 pickup_type = 1
 
+[node name="shield3" parent="power-ups" unique_id=337968052 instance=ExtResource("7_mmu3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.17834, 21.623625, -120.73126)
+collision_layer = 2
+pickup_type = 1
+
+[node name="shield2" parent="power-ups" unique_id=1583446787 instance=ExtResource("7_mmu3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4881706, 21.623625, 168.71988)
+collision_layer = 2
+pickup_type = 1
+
 [node name="dmg" parent="power-ups" unique_id=418836640 instance=ExtResource("7_mmu3l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.87326, 21.623625, 0)
+collision_layer = 2
+pickup_type = 2
+
+[node name="dmg2" parent="power-ups" unique_id=1812697973 instance=ExtResource("7_mmu3l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -155.43242, 21.623625, -38.37081)
 collision_layer = 2
 pickup_type = 2
 

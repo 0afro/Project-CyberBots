@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b2okvk7vf1kpy"]
+
+[ext_resource type="Script" uid="uid://rm5gvkikdrtd" path="res://pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="FontFile" uid="uid://bbdu6ufeu6olp" path="res://Transformers Movie.ttf" id="2_05uyy"]
+
+[node name="PauseMenu" type="Control" unique_id=34110979]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_nwcfo")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1413165292]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -3.0
+offset_right = 1113.0
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=38985962]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 402.5
+offset_top = 80.0
+offset_right = 702.5
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="PausedLabel" type="Label" parent="VBoxContainer" unique_id=1900314436]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_05uyy")
+theme_override_font_sizes/font_size = 64
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer" unique_id=1163343246]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_05uyy")
+theme_override_font_sizes/font_size = 38
+text = "RESUME"
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer" unique_id=948698324]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_05uyy")
+theme_override_font_sizes/font_size = 38
+text = "MAIN MENU"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=76569306]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_05uyy")
+theme_override_font_sizes/font_size = 38
+text = "QUIT"
