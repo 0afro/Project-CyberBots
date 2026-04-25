@@ -1678,6 +1678,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 19.658924, 0)
 [node name="Ambulance_1" parent="Low Poly Vehicals" index="0" unique_id=2024600627]
 transform = Transform3D(-8.319725e-08, 1.9033313, -8.319725e-08, 0, -8.319725e-08, -1.9033313, -1.9033313, -8.319725e-08, 3.6366673e-15, 2.0777295, -8.21474, 151.86784)
 
+[node name="BigTruck_1" parent="Low Poly Vehicals" index="1" unique_id=481647889]
+transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, 175.18001, -4.7183795, 13.241606)
+
+[node name="BigTruck_2" parent="Low Poly Vehicals" index="2" unique_id=414113848]
+transform = Transform3D(-1.9033313, -1.663945e-07, 7.273335e-15, 0, -8.319725e-08, -1.9033313, 1.663945e-07, -1.9033313, 8.319725e-08, 159.6627, -7.494966, 57.869152)
+
+[node name="BigTruck_3" parent="Low Poly Vehicals" index="3" unique_id=1445230249]
+transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, -171.42987, -5.0919437, -43.441635)
+
+[node name="FireTruck_1" parent="Low Poly Vehicals" index="6" unique_id=90417747]
+transform = Transform3D(-8.319725e-08, 1.9033313, -8.319725e-08, 0, -8.319725e-08, -1.9033313, -1.9033313, -8.319725e-08, 3.6366673e-15, 168.83362, -8.019319, 144.5415)
+
+[node name="MuscleCar_1" parent="Low Poly Vehicals" index="7" unique_id=423123699]
+transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, -160.44258, -8.189566, 80.83916)
+
+[node name="OldVan_1" parent="Low Poly Vehicals" index="8" unique_id=1997039356]
+transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, -275.66208, -8.388677, 137.52954)
+
+[node name="PickupTruck_1" parent="Low Poly Vehicals" index="9" unique_id=1954730059]
+transform = Transform3D(-9.557271e-08, -1.9033313, 8.319725e-08, 0, -8.319725e-08, -1.9033313, 2.1864488, -8.319725e-08, 3.6366673e-15, -90.60481, -7.4225388, 129.83717)
+
+[node name="PoliceCar_1" parent="Low Poly Vehicals" index="10" unique_id=1594176184]
+transform = Transform3D(0.9512917, 1.6485491, 0, 5.8956715e-07, -3.4020843e-07, -1.9033313, -1.6485491, 0.9512917, -6.8068437e-07, 36.602142, -6.6627445, 123.57158)
+
+[node name="Sedan_1" parent="Low Poly Vehicals" index="11" unique_id=747299220]
+transform = Transform3D(-1.9033313, -1.663945e-07, 7.273335e-15, 0, -8.319725e-08, -1.9033313, 1.663945e-07, -1.9033313, 8.319725e-08, 154.95174, -4.5996766, -18.634354)
+
+[node name="SmallCar_1" parent="Low Poly Vehicals" index="12" unique_id=2050712462]
+transform = Transform3D(1.8779253, 0, 0.30994573, -0.3088977, 0.15638731, 1.8715756, -0.025466707, -1.8968956, 0.15429983, 59.249184, -2.4280918, 73.04808)
+
+[node name="SportsCar_1" parent="Low Poly Vehicals" index="13" unique_id=659348340]
+transform = Transform3D(0.039926834, -1.9029124, 0, -6.805346e-07, -1.4278953e-08, -1.9033313, 1.9029124, 0.039926834, -6.8068437e-07, 0.37133968, -7.589605, -143.47632)
+
 [node name="Ambulance_2" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=2054497264]
 transform = Transform3D(-8.319725e-08, 1.9033313, -8.319725e-08, 0, -8.319725e-08, -1.9033313, -1.9033313, -8.319725e-08, 3.6366673e-15, 124.94421, -8.2147455, -109.63567)
 mesh = SubResource("ArrayMesh_g5nx5")
@@ -1698,9 +1731,6 @@ mesh = SubResource("ArrayMesh_g5nx5")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.017318726, 0.052225113, -3.3407638)
 shape = SubResource("BoxShape3D_q752e")
 
-[node name="BigTruck_1" parent="Low Poly Vehicals" index="3" unique_id=481647889]
-transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, 175.18001, -4.7183795, 13.241606)
-
 [node name="BigTruck_4" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=15489627]
 transform = Transform3D(-0.0055044666, 1.9029063, 0.03984737, -1.8854272, 1.4901161e-08, -0.2604515, -0.26039332, -0.04022576, 1.885006, 234.57645, -4.718321, -150.7925)
 mesh = SubResource("ArrayMesh_hdrca")
@@ -1710,15 +1740,6 @@ mesh = SubResource("ArrayMesh_hdrca")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Low Poly Vehicals/BigTruck_4/StaticBody3D" unique_id=1904489717]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03503424, 0.10489082, -3.8791819)
 shape = SubResource("BoxShape3D_lxh63")
-
-[node name="BigTruck_2" parent="Low Poly Vehicals" index="5" unique_id=414113848]
-transform = Transform3D(-1.9033313, -1.663945e-07, 7.273335e-15, 0, -8.319725e-08, -1.9033313, 1.663945e-07, -1.9033313, 8.319725e-08, 159.6627, -7.494966, 57.869152)
-
-[node name="BigTruck_3" parent="Low Poly Vehicals" index="6" unique_id=1445230249]
-transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, -171.42987, -5.0919437, -43.441635)
-
-[node name="FireTruck_1" parent="Low Poly Vehicals" index="9" unique_id=90417747]
-transform = Transform3D(-8.319725e-08, 1.9033313, -8.319725e-08, 0, -8.319725e-08, -1.9033313, -1.9033313, -8.319725e-08, 3.6366673e-15, 168.83362, -8.019319, 144.5415)
 
 [node name="FireTruck_3" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=616392339]
 transform = Transform3D(-0.7896614, -1.7317924, 8.319725e-08, -3.451719e-08, -7.569905e-08, -1.9033313, 1.7317924, -0.7896614, 2.5642817e-15, 224.60464, -8.019324, 113.86014)
@@ -1739,18 +1760,6 @@ mesh = SubResource("ArrayMesh_mw3h6")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Low Poly Vehicals/FireTruck_2/StaticBody3D" unique_id=921956398]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034576416, -0.19213772, -2.988188)
 shape = SubResource("BoxShape3D_7rbg6")
-
-[node name="MuscleCar_1" parent="Low Poly Vehicals" index="12" unique_id=423123699]
-transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, -160.44258, -8.189566, 80.83916)
-
-[node name="OldVan_1" parent="Low Poly Vehicals" index="13" unique_id=1997039356]
-transform = Transform3D(1.9033313, 0, 0, 0, -6.8068437e-07, -1.9033313, 0, 1.9033313, -6.8068437e-07, -275.66208, -8.388677, 137.52954)
-
-[node name="PickupTruck_1" parent="Low Poly Vehicals" index="14" unique_id=1954730059]
-transform = Transform3D(-9.557271e-08, -1.9033313, 8.319725e-08, 0, -8.319725e-08, -1.9033313, 2.1864488, -8.319725e-08, 3.6366673e-15, -90.60481, -7.4225388, 129.83717)
-
-[node name="PoliceCar_1" parent="Low Poly Vehicals" index="15" unique_id=1594176184]
-transform = Transform3D(0.9512917, 1.6485491, 0, 5.8956715e-07, -3.4020843e-07, -1.9033313, -1.6485491, 0.9512917, -6.8068437e-07, 36.602142, -6.6627445, 123.57158)
 
 [node name="PoliceCar_3" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=126392837]
 transform = Transform3D(-1.195015, 1.4814214, 0, 5.2979766e-07, 4.2737068e-07, -1.9033313, -1.4814214, -1.195015, -6.8068437e-07, -8.166622, -8.752768, 97.73786)
@@ -1792,11 +1801,8 @@ mesh = SubResource("ArrayMesh_ws428")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016868591, 0.017274857, -2.2014773)
 shape = SubResource("BoxShape3D_gveqd")
 
-[node name="Sedan_1" parent="Low Poly Vehicals" index="20" unique_id=747299220]
-transform = Transform3D(-1.9033313, -1.663945e-07, 7.273335e-15, 0, -8.319725e-08, -1.9033313, 1.663945e-07, -1.9033313, 8.319725e-08, 154.95174, -4.5996766, -18.634354)
-
 [node name="Sedan_2" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=1184998468]
-transform = Transform3D(-1.9033313, -1.663945e-07, 7.273335e-15, 0, -8.319725e-08, -1.9033313, 1.663945e-07, -1.9033313, 8.319725e-08, -40.43551, -4.599679, -74.64017)
+transform = Transform3D(-0.21364778, -1.663945e-07, -1.8913023, 1.8913023, -8.319725e-08, -0.21364778, -6.399378e-08, -1.9033313, 1.7468176e-07, -41.080936, -2.842266, -74.64017)
 mesh = SubResource("ArrayMesh_i4sf4")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Low Poly Vehicals/Sedan_2" unique_id=685641312]
@@ -1804,9 +1810,6 @@ mesh = SubResource("ArrayMesh_i4sf4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Low Poly Vehicals/Sedan_2/StaticBody3D" unique_id=91260952]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00012207031, -0.08730507, -1.9918214)
 shape = SubResource("BoxShape3D_dxm8f")
-
-[node name="SmallCar_1" parent="Low Poly Vehicals" index="22" unique_id=2050712462]
-transform = Transform3D(1.8779253, 0, 0.30994573, -0.3088977, 0.15638731, 1.8715756, -0.025466707, -1.8968956, 0.15429983, 59.249184, -2.4280918, 73.04808)
 
 [node name="SmallCar_2" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=913748941]
 transform = Transform3D(1.0147741, -7.450581e-09, 1.6102496, -1.6048049, 0.15638733, 1.011343, -0.13230623, -1.8968958, 0.083378956, -10.995089, -5.2131367, 72.818474)
@@ -1817,9 +1820,6 @@ mesh = SubResource("ArrayMesh_le7rx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Low Poly Vehicals/SmallCar_2/StaticBody3D" unique_id=1402088976]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017425537, 0.87353325, -2.0094004)
 shape = SubResource("BoxShape3D_qiqnh")
-
-[node name="SportsCar_1" parent="Low Poly Vehicals" index="24" unique_id=659348340]
-transform = Transform3D(0.039926834, -1.9029124, 0, -6.805346e-07, -1.4278953e-08, -1.9033313, 1.9029124, 0.039926834, -6.8068437e-07, 0.37133968, -7.589605, -143.47632)
 
 [node name="SportsCar_2" type="MeshInstance3D" parent="Low Poly Vehicals" unique_id=1174303618]
 transform = Transform3D(-1.9025956, 0.052911565, 5.684342e-14, 1.8922606e-08, 6.8042124e-07, -1.9033313, -0.052911565, -1.9025956, -6.8068437e-07, -78.34477, -7.5895734, -231.10126)
