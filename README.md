@@ -59,21 +59,24 @@ A third-person action game featuring robot combat, enemy AI, area-based progress
 
 ### Installation Steps
 
-1. **Download/Clone Repository**
-   ```bash
-   git clone (https://github.com/0afro/Project-CyberBots.git)
-   ```
+## How to Play
 
-2. **Open in Godot**
-   - Launch Godot Engine
-   - Click "Import"
-   - Navigate to project folder
-   - Select `project.godot`
-   - Click "Import & Edit"
+### Option 1: Play Online (Recommended)
+**🎮 Browser Version:** https://kidou-yuuto.itch.io/cyberbots-battle-for-new-york
 
-3. **Run Game**
-   - Press **F5** or click "Run Project" button
-   - Game starts in first combat area
+- No download or installation required
+- Works in Chrome, Firefox, Edge
+- Recommended for quick testing
+
+ **Note:** First load takes 10-20 seconds whilst assets download. Please be patient!
+
+### Option 2: Download Source & Run in Godot
+For markers who want to view/edit source code:
+
+1. Clone repository or download ZIP
+2. Open Godot Engine 4.3+
+3. Import `project.godot`
+4. Press F5 to run
 
 ### Controls
 
@@ -113,10 +116,9 @@ A third-person action game featuring robot combat, enemy AI, area-based progress
 
 ### Current State
 - **Limited animations** - Character uses idle animation only (walk/run animations disabled due to root motion conflicts)
-- **No main menu** - Game starts directly in gameplay
-- **No pause menu** - Restart required to replay
+- **Some buildings display white materials in web build** - Materials render correctly in Godot editor and source code
 - **Visual polish incomplete** - Basic materials, no particle effects
-- **No audio** - Sound effects and music not implemented
+- **Limited audio** - Sound effects and not implemented but music implemented
 - **Boss fight not implemented** - Planned but not completed
 
 ### Features Planned But Not Implemented
