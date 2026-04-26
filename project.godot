@@ -15,6 +15,10 @@ run/main_scene="uid://be0sxbwpjcmlw"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MusicManager="*uid://d2u372t2ctluy"
+
 [file_customization]
 
 folder_colors={
