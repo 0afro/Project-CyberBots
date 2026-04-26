@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://hecluobjqdp2"]
+
+[ext_resource type="PackedScene" uid="uid://dor1nwsanjw6u" path="res://models/protoformV2.fbx" id="1_mhnms"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhnms"]
+albedo_color = Color(0.58456355, 0.58456355, 0.027188836, 1)
+metallic = 0.44
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2qbww"]
+albedo_color = Color(0.58431375, 0.58431375, 0.02745098, 1)
+metallic = 1.0
+roughness = 0.0
+
+[node name="protoformV2" unique_id=2098965031 instance=ExtResource("1_mhnms")]
+
+[node name="Robot_001" parent="Skeleton3D" parent_id_path=PackedInt32Array(1069799452) index="0" unique_id=1492309283]
+surface_material_override/1 = SubResource("StandardMaterial3D_mhnms")
+surface_material_override/2 = SubResource("StandardMaterial3D_2qbww")

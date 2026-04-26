@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://5ijyhifruiak"]
+
+[ext_resource type="PackedScene" uid="uid://clivmlkcaancy" path="res://models/protoform.glb" id="1_cxtja"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b5nkb"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mwyus"]
+albedo_color = Color(0.20259756, 0.00040201208, 0.3385234, 1)
+metallic = 0.5
+roughness = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mim68"]
+albedo_color = Color(0.85490197, 0.078431375, 0.09411765, 1)
+emission_enabled = true
+emission = Color(0.92156863, 0, 0, 1)
+emission_energy_multiplier = 1.65
+
+[node name="protoform" unique_id=325670113 instance=ExtResource("1_cxtja")]
+
+[node name="Robot_001" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(518856224) index="0" unique_id=776815987]
+surface_material_override/0 = SubResource("StandardMaterial3D_b5nkb")
+surface_material_override/1 = SubResource("StandardMaterial3D_mwyus")
+surface_material_override/3 = SubResource("StandardMaterial3D_mim68")

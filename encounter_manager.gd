@@ -2,10 +2,11 @@ extends Node
 
 var current_area := 1
 var total_areas := 5
-
 var areas := []
 var objective_marker: MeshInstance3D = null
 var hud = null
+var area_transitioning := false  # Prevents repeated calls during area transition
+var victory_scene = preload("res://victory_screen.tscn")  # Victory screen scene
 
 func _ready():
 	add_to_group("encounter_manager")
@@ -58,6 +59,10 @@ func _process(_delta):
 	if areas.size() == 0:
 		return
 	
+	# Skip if already transitioning between areas or game is over
+	if area_transitioning:
+		return
+	
 	if is_area_cleared(current_area):
 		area_cleared()
 
@@ -72,6 +77,7 @@ func is_area_cleared(area_number: int) -> bool:
 
 func area_cleared():
 	print("=== AREA ", current_area, " CLEARED! ===")
+	area_transitioning = true  # Lock to prevent repeated calls
 	current_area += 1
 	
 	if current_area > total_areas:
@@ -80,6 +86,7 @@ func area_cleared():
 		await get_tree().create_timer(2.0).timeout
 		update_objective()
 		print("NEW OBJECTIVE: Clear Area ", current_area)
+		area_transitioning = false  # Unlock after transition
 
 func update_objective():
 	if current_area <= total_areas and areas.size() > 0:
@@ -107,7 +114,7 @@ func create_objective_marker():
 	var mesh = CylinderMesh.new()
 	mesh.height = 50.0
 	mesh.top_radius = 8.0  # Wide at top
-	mesh.bottom_radius = 0.0  # Point at bottom 
+	mesh.bottom_radius = 0.0  # Point at bottom
 	objective_marker.mesh = mesh
 	
 	var material = StandardMaterial3D.new()
@@ -122,11 +129,11 @@ func create_objective_marker():
 
 func victory():
 	print("=== VICTORY! ===")
+	area_transitioning = true  # Stay locked, game is over
+	
 	if objective_marker:
 		objective_marker.visible = false
 	
-	if hud and hud.has_method("show_victory"):
-		hud.show_victory()
-	
-	await get_tree().create_timer(3.0).timeout
-	get_tree().reload_current_scene()
+	# Show victory screen instead of reloading
+	var victory_screen = victory_scene.instantiate()
+	get_tree().root.add_child(victory_screen)
