@@ -189,6 +189,56 @@
 - Prepared demo recording showing complete area progression gameplay
 - Final GitHub push before April 27 submission deadline
 
+### 26/04/26 — Final Menu Systems & Web Deployment
+
+**Main Menu Implementation:**
+- Created main menu scene with Cybertron planet background
+- Implemented START GAME and QUIT buttons with custom styling
+- Set main_menu.tscn as project main scene
+- Added Transformers-style font and metallic UI elements
+- Background image: "Cybertron Planet" by jjasso (DeviantArt - free use)
+
+**Pause System:**
+- Implemented ESC key pause functionality
+- Created pause menu overlay with semi-transparent background
+- Added RESUME, MAIN MENU, and QUIT options
+- Configured Process Mode to "Always" for pause menu functionality
+- Integrated pause system into player controller (bee.gd)
+
+**Victory Screen Enhancement:**
+- Enhanced existing victory screen with RESTART and MAIN MENU options
+- Connected victory screen to menu navigation system
+- Added proper scene transition handling
+
+**Web Build & Deployment:**
+- Exported HTML5 web build for browser play
+- Deployed to itch.io: https://kidou-yuuto.itch.io/cyberbots-battle-for-new-york
+- Configured viewport dimensions (1152×648) for consistent display
+- Tested local build with Servez before deployment
+- Added loading warnings for 10-20 second initial load time
+
+**Enemy Visual Updates:**
+- Updated enemy models to use protoform character mesh
+- Scaled enemy models to match player scale (0.5)
+- Repositioned enemy weapons and laser sight
+- Maintained original AI functionality whilst improving visual consistency
+
+**Documentation Finalisation:**
+- Updated README.md with itch.io play link
+- Added web build loading time notices
+- Documented white building material issue in web build
+- Credited background artist and custom fonts
+- Prepared final submission package with all deliverables
+
+### Final Submission — 27/04/26
+- Complete game with main menu, pause, and victory screens
+- Playable web build deployed to itch.io
+- All source code pushed to GitHub
+- Demo video prepared showing full gameplay loop
+- Documentation complete: README, DEVLOG, development evidence
+- Submitted via VLE before 12:00pm deadline
+
+
 ## Development Challenges
 
 ### PC Drive Failure Recovery (March 2026)
