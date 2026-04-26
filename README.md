@@ -169,6 +169,10 @@ Due to the PC drive failure in March 2026, original custom-made building and roa
 - **Road models:** https://kenney.nl/assets/city-kit-roads
 - **Vehicle models:** https://www.cgtrader.com/designers/jeremiahm?utm_source=credit&utm_source=credit_item_page
 
+### UI & Menu
+- **Menu background:** "Cybertron Planet" by jjasso on DeviantArt (https://www.deviantart.com/jjasso/art/Cybertron-planet-146998552) - Free to use
+- **Custom font:** transformers-movie font from DaFont.com (Free for personal use (https://www.dafont.com/transformers-movie.font))
+
 All other assets (character model, weapon, environment layout, textures) are original work.
 
 ### Character & Animations
