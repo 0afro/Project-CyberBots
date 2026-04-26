@@ -2,6 +2,8 @@
 
 A low-poly third-person shooter where players control giant robots defending Earth from an invasion force.
 
+**🎮 Play Online:** https://kidou-yuuto.itch.io/cyberbots-battle-for-new-york
+
 **Submission:** Final Year Project - Goldsmiths, University of London  
 **Developer:** Muhammed Marong  
 **Submission Date:** April 27, 2026
