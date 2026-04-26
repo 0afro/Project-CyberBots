@@ -236,7 +236,7 @@
 - All source code pushed to GitHub
 - Demo video prepared showing full gameplay loop
 - Documentation complete: README, DEVLOG, development evidence
-- Submitted via VLE before 12:00pm deadline
+- Submitted via VLE on txt file with all links
 
 
 ## Development Challenges
