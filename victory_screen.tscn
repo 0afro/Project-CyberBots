@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ggv6gcllfrqk"]
+
+[ext_resource type="Script" uid="uid://dd030sm7ikupt" path="res://victory_screen.gd" id="1_r8dr5"]
+[ext_resource type="Texture2D" uid="uid://cwiv5fyonkgsy" path="res://cybertron_planet_by_jjasso_d2ia99o Fixed.jpg" id="1_rbj82"]
+[ext_resource type="FontFile" uid="uid://bbdu6ufeu6olp" path="res://Transformers Movie.ttf" id="2_qyds8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8dr5"]
+bg_color = Color(0.16470589, 0.16470589, 0.16470589, 0.8392157)
+
+[node name="VictoryScreen" type="Control" unique_id=320312556]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_r8dr5")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1778605172]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -730.0
+offset_top = -402.0
+offset_right = 1120.0
+offset_bottom = 620.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_rbj82")
+
+[node name="Label" type="Label" parent="." unique_id=1758775328]
+layout_mode = 1
+offset_left = 655.0
+offset_top = 10.0
+offset_right = 1085.0
+offset_bottom = 137.0
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.3019608, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_qyds8")
+theme_override_font_sizes/font_size = 128
+text = "VICTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1475912729]
+layout_mode = 1
+offset_left = 742.0
+offset_top = 111.0
+offset_right = 1100.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.3019608, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 10
+theme_override_constants/shadow_outline_size = 5
+theme_override_fonts/font = ExtResource("2_qyds8")
+theme_override_font_sizes/font_size = 32
+text = "WELL FOUGHT VANGUARD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2032630642]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 213.0
+offset_right = 1048.0
+offset_bottom = 513.0
+theme_override_constants/separation = 30
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=785772866]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.64705884, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.64705884, 0, 1)
+theme_override_fonts/font = ExtResource("2_qyds8")
+theme_override_font_sizes/font_size = 49
+theme_override_styles/normal = SubResource("StyleBoxFlat_r8dr5")
+text = "RESTART"
+
+[node name="MainMenuButton" type="Button" parent="VBoxContainer" unique_id=1408359835]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 0.7529412, 0.7529412, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.64705884, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0.64705884, 0, 1)
+theme_override_fonts/font = ExtResource("2_qyds8")
+theme_override_font_sizes/font_size = 49
+theme_override_styles/normal = SubResource("StyleBoxFlat_r8dr5")
+text = "Main Menu"
